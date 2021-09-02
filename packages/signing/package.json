@@ -1,0 +1,10 @@
+{
+  "name": "@arbiter/arb-signing",
+  "version": "0.0.28",
+  "dependencies": {
+    "bitcoinjs-lib": "3.3.2",
+    "bitcoinjs-message": "2.0.0",
+    "@arbiter/dumb-lumberjack": "0.1.47"
+  },
+  "gitHead": "be54017539c0e932352e93e5ac038e5eccca472e"
+}

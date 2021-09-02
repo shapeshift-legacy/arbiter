@@ -1,0 +1,26 @@
+{
+  "name": "@arbiter/arb-config",
+  "version": "1.0.40",
+  "description": "",
+  "main": "./bin/index.js",
+  "preferGlobal": true,
+  "bin": {
+    "arb-config": "./bin/index.js"
+  },
+  "publishConfig": {
+    "registry": "http://nexus.redacted.example.com/repository/npm-shapeshift/"
+  },
+  "dependencies": {
+    "aws-cli": "0.0.2",
+    "aws-sdk": "2.291.0",
+    "ioredis": "3.2.2",
+    "minimist": "1.2.0",
+    "user": "0.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "gitHead": "be54017539c0e932352e93e5ac038e5eccca472e"
+}

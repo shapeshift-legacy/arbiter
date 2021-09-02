@@ -1,0 +1,19 @@
+{
+  "name": "@arbiter/dumb-lumberjack",
+  "version": "0.1.47",
+  "description": "A simple logger for nodejs",
+  "main": "index.js",
+  "publishConfig": {
+    "registry": "http://nexus.redacted.example.com/repository/npm-shapeshift/"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bunyan": "^1.8.12",
+    "cli-color": "1.2.0"
+  },
+  "gitHead": "f6ad3d6bbddf652e65b1f7a7c68b579486547e93"
+}

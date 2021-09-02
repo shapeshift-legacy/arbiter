@@ -1,0 +1,15 @@
+{
+  "apps": [{
+    "script": "api.js",
+    "name": "teLTC_BTC",
+    "args": "3000 LTC_BTC"
+  }, {
+    "script": "api.js",
+    "name": "teETH_BTC",
+    "args": "3001 ETH_BTC"
+  }, {
+    "script": "api.js",
+    "name": "teGNT_BTC",
+    "args": "3002 GNT_BTC"
+  }]
+}

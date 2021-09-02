@@ -1,0 +1,36 @@
+version: '2'
+services:
+  aman-nexus:
+    container_name: aman-nexus
+    build: .
+    command: node app
+    volumes:
+      - .:/usr/app/
+      - /usr/app/node_modules
+    env_file:
+      - ../../.env
+    network_mode: host
+  gnt-mock:
+    container_name: gnt-mock
+    build: .
+    command: node run-gnt-mock
+    volumes:
+      - .:/usr/app/
+      - /usr/app/node_modules
+    env_file:
+      - .env
+    ports:
+      - "18303:18303"
+    network_mode: host
+  eth-mock:
+    container_name: eth-mock
+    build: .
+    command: node run-eth-mock
+    volumes:
+      - .:/usr/app/
+      - /usr/app/node_modules
+    env_file:
+      - .env
+    ports:
+      - "18302:18302"
+    network_mode: host

@@ -1,0 +1,168 @@
+return
+/*
+
+        Binance trade module
+
+        Goals:
+            Full audibility on trades and balances.
+            buffering dust and small trade handleing
+
+
+        Tests:
+            Reports balances
+            place limit
+            report trade events
+
+ */
+//require('dotenv').configs({path: '../.env'});
+require('dotenv').config();
+
+const config = require("../configs/env")
+
+const log = require('@arbiter/dumb-lumberjack')()
+//let { btc } = require('../modules/daemons-manager')
+
+const pause = function(length){
+    return new Promise(function(resolve, reject) {
+        var done = function(){resolve(true)}
+        setTimeout(done,length*1000)
+    })
+}
+
+// client.balances()
+//     .then(function(resp){
+//         console.log("resp: ",resp)
+//     })
+
+
+const client = require("../modules/binance-client.js")
+
+describe(' - Intergration test for project Arbiter liquidty agent - ', () => {
+
+    let depositAddress
+    let depositAmount = 0.001
+    let txidDeposit
+    let balanceStart
+
+    test('configs is required correctly', () => {
+
+        //get account info
+        //log.debug(configs)
+        expect(config.AGENT_BTC_SIGNING_PRIVKEY).toBeDefined()
+        expect(config.AGENT_BTC_MASTER).toBeDefined()
+
+    })
+
+    test('gives valid account object', async () => {
+        //get account info
+
+        let accountInfo = await client.balances()
+        log.debug("accountInfo: ",accountInfo)
+
+        expect(accountInfo).toBeDefined()
+        expect(accountInfo.BTC).toBeDefined()
+    })
+
+    test('acquire address', async () => {
+
+        //get account info
+        let address = await client.address("BTC")
+        log.debug("address: ",address)
+        expect(address).toBeDefined()
+        depositAddress = address
+    })
+
+
+
+    test('address is static', async () => {
+
+        //get account info
+        let address = await client.address("BTC")
+        log.debug("address: ",address)
+
+        let payload = address.payload
+        expect(payload).toEqual(depositAddress)
+
+    })
+
+    //really slow mainnet
+    test.skip('can fund address from coin', async () => {
+
+        txidDeposit = await btc.sendToAddress(depositAddress,depositAmount)
+        expect(txidDeposit).toBeDefined()
+        log.debug("txidDeposit: ",txidDeposit)
+    })
+
+
+    test.skip('Arbiter detects deposit', async () => {
+        await pause(1)
+        //get balance coin
+        //get account info
+        let balance = await client.balance("BTC")
+        log.debug("(pre) balance: ",balance)
+
+        balance = balance.payload
+        log.debug("balance: ",balance)
+
+        balance = balance * 100000000
+        balance = parseInt(balance)
+        log.debug("balance: ",balance)
+
+
+        //expect it to equal startBalance + new
+        let expectedBalance = parseInt(balanceStart) + 100000
+
+        log.debug("balance: ",typeof(balance))
+        log.debug("expectedBalance: ",typeof(expectedBalance))
+
+        //TODO PAUSE, try again
+
+        expect(balance).toEqual(expectedBalance)
+    })
+
+
+    test.only('agent can place limit order', async () => {
+
+        balanceStart = await client.balances()
+        balanceStart = balanceStart.BTC
+        log.debug("balanceStart: ",balanceStart)
+        balanceStart = parseFloat(balanceStart.payload) * 100000000
+
+
+        let market = "LTCBTC"
+        let quantity = 0.001
+        let rate = 0.01509611
+        let type = "bid"
+
+        let orderInfo = await client.bid(market,quantity,rate,type)
+        log.debug("orderInfo: ",orderInfo)
+
+        // let response = orderInfo.payload
+        // //expect orderId
+        // expect(response.orderId).toBeDefined()
+        // expect(response.account).toEqual(configs.AGENT_BTC_MASTER)
+        // expect(response.newBalance).toBeDefined()
+        // //expect new balance to be correct
+        // let newBalance = response.newBalance
+        // newBalance = parseFloat(newBalance) * 100000000
+        //
+        // let expectedBalance = balanceStart - 100000
+        // expect(newBalance).toEqual(expectedBalance)
+
+    })
+
+    // test('Arbiter withdrawals coin', async () => {
+    //
+    //     //get balance coin
+    //     //get account info
+    //     let withdrawal = await client.withdraw("BTC",configs.AGENT_BTC_MASTER,depositAmount)
+    //     log.debug("withdrawal: ",withdrawal)
+    //
+    //     //expect txid
+    //
+    //     //TODO audit amounts
+    //
+    //
+    // })
+
+})

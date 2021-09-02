@@ -1,0 +1,10 @@
+{
+  "apps" : [
+    {
+      "script": "app.js",
+      "name": "arbiter-bot",
+      "log_date_format": "MM-DD-YY HH:mm:ss.SSS",
+      "kill_timeout": 30000
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "@arbiter/arb-accounting",
+  "version": "0.1.47",
+  "description": "",
+  "main": "accounting.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "publishConfig": {
+    "registry": "http://nexus.redacted.example.com/repository/npm-shapeshift/"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "big.js": "5.1.2",
+    "@arbiter/dumb-lumberjack": "0.1.47"
+  },
+  "gitHead": "f6ad3d6bbddf652e65b1f7a7c68b579486547e93"
+}

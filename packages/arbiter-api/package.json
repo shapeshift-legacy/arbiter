@@ -1,0 +1,14 @@
+{
+  "name": "@arbiter/arb-api-client",
+  "version": "0.0.22",
+  "dependencies": {
+    "@arbiter/arb-signing": "0.0.28",
+    "axios": "^0.18.0",
+    "bitcoinjs-lib": "^4.0.2",
+    "bitcoinjs-message": "^2.0.0",
+    "nonce": "^1.0.4",
+    "react-bitcoin-qr": "0.0.3",
+    "react-dropdown-input": "^0.1.11",
+    "uuid": "^3.3.2"
+  }
+}

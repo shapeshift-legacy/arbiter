@@ -1,0 +1,7 @@
+{
+  "apps":[{
+    "name": 'oracle-api',
+    "script": './api.js',
+    "instances": 1
+  }]
+}

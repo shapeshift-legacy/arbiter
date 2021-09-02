@@ -1,0 +1,14 @@
+version: '2'
+services:
+  arbiter-api:
+    container_name: arbiter-api
+    build: .
+    command: node app
+    volumes:
+      - .:/usr/app/
+      - /usr/app/node_modules
+    env_file:
+      - .env
+    ports:
+      - "3000:3000"
+    network_mode: host

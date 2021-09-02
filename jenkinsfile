@@ -1,0 +1,55 @@
+pipeline {
+    agent {
+        docker {
+            image 'node:6-alpine'
+            args '-p 3000:3000'
+        }
+    }
+    environment {
+        CI = 'true'
+    }
+    stages {
+
+        stage('checkout') {
+           steps {
+               checkout scm
+           }
+        }
+
+        stage('npm install') {
+            steps {
+                sh 'npm install'
+            }
+        }
+
+        stage('npm Build') {
+            steps {
+                sh 'npm build'
+            }
+
+        }
+
+        /*
+        stage('docker Build') {
+            steps {
+                script {
+                    sh 'bash deploy-local.sh'
+                }
+            }
+        }
+
+        stage('slack successfull') {
+            steps {
+                notifySuccessful()
+            }
+
+        }
+        */
+    }
+}
+
+/*
+def notifySuccessful() {
+  slackSend (color: '#00FF00', message: "SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+}
+*/

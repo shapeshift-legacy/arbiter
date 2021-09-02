@@ -1,0 +1,11 @@
+{
+  "name": "@arbiter/aman-client",
+  "description": "Communicate with aman via JSON-RPC",
+  "version": "0.1.54",
+  "main": "index.js",
+  "author": "highlander",
+  "publishConfig": {
+    "registry": "http://nexus.redacted.example.com/repository/npm-shapeshift/"
+  },
+  "gitHead": "f6ad3d6bbddf652e65b1f7a7c68b579486547e93"
+}

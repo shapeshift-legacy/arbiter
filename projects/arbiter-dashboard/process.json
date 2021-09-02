@@ -1,0 +1,10 @@
+{
+  "apps" : [
+    {
+      "script": "build/dev-server.js",
+      "name": "arbiter-dashboard",
+      "log_date_format": "MM-DD-YY HH:mm:ss.SSS",
+      "kill_timeout": 30000
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+version: '2'
+services:
+  arbiter-graphql:
+    container_name: arbiter-graphql
+    build: .
+    command: node app
+    volumes:
+      - .:/usr/app/
+      - /usr/app/node_modules
+    env_file:
+      - .env
+    ports:
+      - "4000:4000"
+    network_mode: host

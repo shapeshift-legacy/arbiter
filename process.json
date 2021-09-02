@@ -1,0 +1,110 @@
+{
+  "apps" : [
+    {
+      "script"    : "./projects/aman-nexus/app.js",
+      "name" : "aman-nexus"
+    },
+    {
+      "script"    : "./projects/aman-nexus/run-gnt-mock.js",
+      "name" : "GNT mock"
+    },
+    {
+      "script"    : "./projects/aman-nexus/run-eth-mock.js",
+      "name" : "ETH mock"
+    },
+    {
+      "script"    : "./projects/aman-nexus/eth-notify-hack.js",
+      "name" : "mock-payment"
+    },
+    {
+      "script"    : "./projects/arbiter-api/app.js",
+      "name" : "arb-api"
+    },
+    {
+      "script"    : "./projects/oracle/api.js",
+      "name" : "oracle api"
+    },
+    {
+      "script"    : "./projects/arbiter-core/app.js",
+      "name" : "core app"
+    },
+    {
+      "script"    : "./projects/arbiter-core/api.js",
+      "name" : "core api"
+    },
+    {
+      "script"    : "./projects/arbiter-graphql/app.js",
+      "name" : "graphql"
+    },
+    {
+      "script"    : "./projects/arbiter-bot/app.js",
+      "name" : "arb-bot"
+    },
+    {
+      "script"    : "./projects/arbiter-core/workers/fullfillment-worker.js",
+      "name" : "core-worker fullfillment"
+    },
+    {
+      "script"    : "./projects/arbiter-core/workers/sweeping-worker.js",
+      "name" : "core-worker sweeping"
+    },
+    {
+      "script"    : "./projects/arbiter-core/workers/slack-worker.js",
+      "name" : "core-worker slack"
+    },
+    {
+      "script"    : "./projects/arbiter-core/workers/admin-worker.js",
+      "name" : "core-worker admin"
+    },
+    {
+      "script"    : "./projects/arbiter-core/workers/data-fetcher.js",
+      "name" : "core-worker data-fetcher"
+    },
+    {
+      "script"    : "./projects/arbiter-core/workers/audit-trades.js",
+      "name" : "core-worker trade-audit"
+    },
+    {
+      "script"    : "./projects/arbiter-core/workers/audit-transfers.js",
+      "name" : "core-worker transfer-audit"
+    },
+    {
+      "script"    : "./projects/arbiter-core/workers/chart-worker.js",
+      "name" : "core-worker chart-worker"
+    },
+    {
+      "script"    : "./projects/arbiter-core/workers/report-worker.js",
+      "name" : "core-worker report-worker"
+    },
+    {
+      "script"    : "./projects/arbiter-liquidity-agent/app.js",
+      "args": "LTC_BTC",
+      "name" : "LiquLTC_BTC"
+    },
+    {
+      "script"    : "./projects/arbiter-liquidity-agent/app.js",
+      "args": "ETH_BTC",
+      "name" : "LiquETH_BTC"
+    },
+    {
+      "script"    : "./projects/arbiter-liquidity-agent/app.js",
+      "args": "GNT_BTC",
+      "name" : "LiquGNT_BTC"
+    },
+    {
+      "script": "./projects/arbiter-trade-engine/api.js",
+      "name": "teLTC_BTC",
+      "args": "5000 LTC_BTC"
+    },
+    {
+      "script": "./projects/arbiter-trade-engine/api.js",
+      "name": "teETH_BTC",
+      "args": "5001 ETH_BTC"
+    },
+    {
+      "script": "./projects/arbiter-trade-engine/api.js",
+      "name": "teGNT_BTC",
+      "args": "5002 GNT_BTC"
+    }
+  ]
+}

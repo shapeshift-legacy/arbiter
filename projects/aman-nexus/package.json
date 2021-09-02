@@ -1,0 +1,28 @@
+{
+  "name": "aman-nexus",
+  "version": "0.1.53",
+  "scripts": {
+    "nexus app": "node app.js",
+    "eth mock": "node run-eth-mock.js",
+    "gnt mock": "node run-gnt-mock.js",
+    "notify": "node eth-notify-hack.js"
+  },
+  "publishConfig": {
+    "registry": "http://nexus.redacted.example.com/repository/npm-shapeshift/"
+  },
+  "dependencies": {
+    "@arbiter/aman-client": "0.1.54",
+    "@arbiter/arb-daemons-manager": "0.1.54",
+    "@arbiter/arb-mongo": "0.0.31",
+    "@arbiter/arb-redis": "0.0.20",
+    "dotenv": "^6.0.0",
+    "@arbiter/dumb-lumberjack": "0.1.47",
+    "monk": "^6.0.6",
+    "node-uuid": "^1.4.8",
+    "pm2": "^2.10.4",
+    "redis": "^2.8.0",
+    "request": "^2.87.0",
+    "then-redis": "^2.0.1"
+  },
+  "gitHead": "be54017539c0e932352e93e5ac038e5eccca472e"
+}

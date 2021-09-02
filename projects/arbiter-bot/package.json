@@ -1,0 +1,31 @@
+{
+  "name": "arbiter-bot",
+  "version": "0.0.27",
+  "dependencies": {
+    "@arbiter/arb-daemons-manager": "0.1.54",
+    "@arbiter/arb-mongo": "0.0.31",
+    "@arbiter/arb-redis": "0.0.20",
+    "@arbiter/arb-views": "0.0.10",
+		"@arbiter/arbiter-custodial": "0.0.39",
+    "@arbiter/arbiter-exchange-controller": "0.0.17",
+    "dotenv": "^6.0.0",
+    "@arbiter/dumb-lumberjack": "0.1.47",
+    "json-pretty-html": "^1.1.2",
+    "json-to-html": "^0.1.2",
+    "marked": "^0.4.0",
+    "mongo": "^0.1.0",
+    "monk": "^6.0.6",
+    "random-hex-color": "^1.0.1",
+    "request": "^2.88.0",
+    "rivescript": "^2.0.0-alpha.6",
+    "sentence-tokenizer": "^1.0.0",
+    "shortid": "^2.2.12",
+    "then-redis": "^2.0.1",
+    "views": "^1.0.2",
+    "when": "^3.7.8"
+  },
+  "publishConfig": {
+    "registry": "http://nexus.redacted.example.com/repository/npm-shapeshift/"
+  },
+  "gitHead": "be54017539c0e932352e93e5ac038e5eccca472e"
+}

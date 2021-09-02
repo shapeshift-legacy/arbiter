@@ -1,0 +1,19 @@
+{
+  "name": "@arbiter/arb-daemons-manager",
+  "version": "0.1.54",
+  "description": "",
+  "main": "index.js",
+  "publishConfig": {
+    "registry": "http://nexus.redacted.example.com/repository/npm-shapeshift/"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@arbiter/aman-client": "0.1.54",
+    "dumb-lumberjack": "1.0.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "gitHead": "be54017539c0e932352e93e5ac038e5eccca472e"
+}

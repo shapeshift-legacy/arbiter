@@ -1,0 +1,42 @@
+version: '2'
+services:
+  liquidity-data-fetcher:
+    container_name: liqui-data-fetcher
+    build: .
+    command: node app LTC_BTC
+    volumes:
+      - .:/usr/app/
+      - /usr/app/node_modules
+    env_file:
+      - .env
+    network_mode: host
+  liqu-ltc-btc:
+    container_name: Liqu-ltc-btc
+    build: .
+    command: node app LTC_BTC
+    volumes:
+      - .:/usr/app/
+      - /usr/app/node_modules
+    env_file:
+      - .env
+    network_mode: host
+  liqu-eth-btc:
+    container_name: Liqu-eth-btc
+    build: .
+    command: node app ETH_BTC
+    volumes:
+      - .:/usr/app/
+      - /usr/app/node_modules
+    env_file:
+      - .env
+    network_mode: host
+  liqu-gnt-btc:
+    container_name: Liqu-gnt-btc
+    build: .
+    command: node app GNT_BTC
+    volumes:
+      - .:/usr/app/
+      - /usr/app/node_modules
+    env_file:
+      - .env
+    network_mode: host

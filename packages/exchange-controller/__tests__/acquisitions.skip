@@ -1,0 +1,88 @@
+
+/*
+
+        Binance trade module
+
+        Goals:
+            Full audibility on trades and balances.
+            buffering dust and small trade handleing
+
+
+        Tests:
+            Reports balances
+            place limit
+            report trade events
+
+ */
+require('dotenv').config({path: '../.env'});
+//require('dotenv').config();
+
+const config = require("../configs/env")
+
+const log = require('@arbiter/dumb-lumberjack')()
+//let { btc } = require('../modules/daemons-manager')
+
+const pause = function(length){
+    return new Promise(function(resolve, reject) {
+        var done = function(){resolve(true)}
+        setTimeout(done,length*1000)
+    })
+}
+
+/*
+    Rules of Acquisition
+
+    * The best deal is the one that brings the most profit.
+
+
+    Goals: acquire the desired asset optimizing to minimize the disposed net asset value lost
+    flexible base paths (USD BTC ETH)
+
+    flexible exchanges
+
+    partials between exchanges (when appropriate)
+
+ */
+
+
+
+
+
+describe(' - acquisition testing liquidty agent - ', () => {
+
+
+
+    test('configs is required correctly', () => {
+
+        //get account info
+        //log.debug(configs)
+        expect(config.REDIS_IP).toBeDefined()
+        expect(config.MONGO_IP).toBeDefined()
+
+    })
+
+    test(' Acquire LTC ', async () => {
+        //TODO path selection
+
+        //choose binance
+
+        //predict credit debit amounts
+        //predict fee
+
+        //exucute
+
+        //publish work to queue
+
+        //listen to work accomplished
+
+        //report on prediction and result
+
+        //get account info
+        // let accountInfo = await client.balances()
+        // log.debug("accountInfo: ",accountInfo)
+        //
+        // expect(accountInfo).toBeDefined()
+        // expect(accountInfo.BTC).toBeDefined()
+    })
+
+})

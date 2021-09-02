@@ -1,0 +1,33 @@
+{
+  "apps" : [
+    {
+      "script"    : "./rpc.js",
+      "name" : "rpc-ETH-3003",
+      "env" : {
+        "RPC_PORT": 3003,
+        "COIN": "ETH"
+      },
+      "kill_timeout": 120000
+    }, {
+      "script"    : "./rpc.js",
+      "name" : "rpc-GNT-3004",
+      "env" : {
+        "RPC_PORT": 3004,
+        "COIN": "GNT"
+      },
+      "kill_timeout": 120000
+    }, {
+      "script"    : "./workers/block-digester.js"
+    }, {
+      "script"    : "./workers/block-listener.js"
+    }, {
+      "script"    : "./workers/create-forwarders.js"
+    }, {
+      "script"    : "./workers/contract-listener.js"
+    }, {
+      "script"    : "./workers/token-payments.js"
+    }, {
+      "script"    : "workers/wallet-notify.js"
+    }
+  ]
+}

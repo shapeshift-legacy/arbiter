@@ -1,0 +1,25 @@
+{
+  "name": "arbiter",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "projects/*",
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "pm2 all": "pm2 start process.json",
+    "arbiter-api": "docker-compose --file ./projects/arbiter-api/docker-compose.yml up --build -d",
+    "aman": "docker-compose --file ./projects/aman/docker-compose.yml up --build -d",
+    "aman-nexus": "docker-compose --file ./projects/aman-nexus/docker-compose.yml up --build -d",
+    "admin-web": "docker-compose --file ./projects/arbiter-admin/docker-compose.yml up --build -d",
+    "arbiter-bot": "docker-compose --file ./projects/arbiter-bot/docker-compose.yml up --build -d",
+    "arbiter-core": "docker-compose --file ./projects/arbiter-core/docker-compose.yml up --build -d",
+    "arbiter-graphql": "docker-compose --file ./projects/arbiter-graphql/docker-compose.yml up --build -d",
+    "arbiter-liquidity-agent": "docker-compose --file ./projects/arbiter-liquidity-agent/docker-compose.yml up --build -d",
+    "arbiter-trade-engine": "docker-compose --file ./projects/arbiter-trade-engine/docker-compose.yml up --build -d",
+    "oracle-api": "docker-compose --file ./projects/oracle/docker-compose.yml up --build -d"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

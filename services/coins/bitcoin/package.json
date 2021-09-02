@@ -1,0 +1,11 @@
+{
+  "name": "bitcoin",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "",
+    "run": "docker run --rm ruimarinho/bitcoin-core -printtoconsole -regtest=1 -rpcallowip=172.17.0.0/16 -rpcpassword=bar -rpcuser=foo"
+  },
+  "dependencies": {
+    
+  }
+}

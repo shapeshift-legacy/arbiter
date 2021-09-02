@@ -1,0 +1,19 @@
+{
+  "name": "@arbiter/coin-type-info",
+  "version": "0.1.47",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "publishConfig": {
+    "registry": "http://nexus.redacted.example.com/repository/npm-shapeshift/"
+  },
+  "dependencies": {
+    "web3": "1.0.0-beta.34",
+    "websocket": "^1.0.26"
+  },
+  "gitHead": "be54017539c0e932352e93e5ac038e5eccca472e"
+}

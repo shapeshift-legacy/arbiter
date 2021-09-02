@@ -1,0 +1,35 @@
+{
+  "name": "api-graphql",
+  "version": "0.1.50",
+  "scripts": {
+    "test": "mocha $(find test -name '*.spec.js')",
+    "test-cov": "istanbul cover -x test/mocha-common.spec.js _mocha -- $(find test -name '*.spec.js')",
+    "start": "node app.js"
+  },
+  "publishConfig": {
+    "registry": "http://nexus.redacted.example.com/repository/npm-shapeshift/"
+  },
+  "dependencies": {
+    "apollo-server-express": "^2.0.0",
+    "@arbiter/arb-mongo": "0.0.31",
+    "@arbiter/arb-views": "0.0.10",
+    "chalk": "^2.4.1",
+    "deepmerge": "^2.1.1",
+    "dotenv": "^6.0.0",
+    "@arbiter/dumb-lumberjack": "0.1.47",
+    "express": "^4.16.3",
+    "graphql": "^0.13.2",
+    "graphql-type-json": "^0.2.1",
+    "json-to-html": "^0.1.2",
+    "markdown-table": "^1.1.2",
+    "monk": "^6.0.6",
+    "password-hash": "^1.2.2",
+    "redis": "^2.8.0",
+    "request": "^2.87.0",
+    "shortid": "^2.2.13",
+    "then-redis": "^2.0.1",
+    "when": "^3.7.8",
+    "yub": "^0.11.1"
+  },
+  "gitHead": "f6ad3d6bbddf652e65b1f7a7c68b579486547e93"
+}

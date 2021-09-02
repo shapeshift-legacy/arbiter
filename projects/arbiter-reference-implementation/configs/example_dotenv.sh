@@ -1,0 +1,23 @@
+export ORACLE_URL="http://arb-oracle-api01.staging.redacted.example.com:3000/api/v1"
+export ARBITER_URL="http://arb-api01.staging.redacted.example.com:3000/api/v1"
+export ORACLE_SIGNING_ADDRESS="1KdL8uuEDKDB9zFBAkJbWf62QWsEkfzve3"
+export ARBITER_SIGNING_ADDRESS="1EbE7NHdEae1NQu2vQ9i6U43CaudQVfFQz"
+export USER_BTC_SIGNING_ADDRESS="1EZfXK7AFxY6HLeJRjyDXm5hpTT84NkwFX"
+export ORDER_PUBKEY="02d8121725e4b920f1d9b3998a0ece3764a751e80574723f443a94b8547052b3a0"
+export USER_ETH_ADDRESS="0xfE22566EaEe332EDf9f1De7592AD80fb90788694"
+
+export BTC_DAEMON_HOST="bitcoin01.staging.redacted.example.com"
+export BTC_DAEMON_PORT="19330"
+export BTC_DAEMON_USER=""
+export BTC_DAEMON_PASS=""
+
+export LTC_DAEMON_HOST="litecoin.staging.redacted.example.com"
+export LTC_DAEMON_PORT="19330"
+export LTC_DAEMON_USER=""
+export LTC_DAEMON_PASS=""
+
+export ETH_DAEMON_HOST="arb-eth01.staging.redacted.example.com"
+export ETH_DAEMON_PORT="8545"
+# export ETH_DAEMON_USER=""
+# export ETH_DAEMON_PASS=""
+export ETH_DAEMON_WEBSOCKETPORT="8546"

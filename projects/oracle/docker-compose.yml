@@ -1,0 +1,14 @@
+version: '2'
+services:
+  oracle-api:
+    container_name: oracle-api
+    build: .
+    command: node api
+    volumes:
+      - .:/usr/app/
+      - /usr/app/node_modules
+    env_file:
+      - .env
+    ports:
+      - "5555:5555"
+    network_mode: host

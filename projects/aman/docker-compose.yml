@@ -1,0 +1,59 @@
+version: '3.0'
+# docker-compose.yml up geth-dev
+services:
+  geth:
+    container_name: geth-node-1.7-mainnet
+    image: speakerwiggin/geth-dev:v1.7
+    entrypoint: geth --dev -dev.period 1 --networkid 1001 --ws --wsapi web3,eth,net,admin,personal,debug --wsaddr "0.0.0.0" --wsport 8546 --wsorigins "*" --rpc --rpcapi web3,eth,net,admin,personal,debug --rpcaddr "0.0.0.0" --rpccorsdomain "*" --rpcport 8545 --gasprice "1" --targetgaslimit 7500000
+    ports:
+      - "8545:8545"
+      - "8546:8546"
+      - "30303:30303"
+    volumes:
+      - "bin:/usr/local/bin"
+    networks:
+      - redis-net
+  geth-dev:
+    container_name: geth-node-1.7-testnet
+    image: speakerwiggin/generate-geth-accounts:latest
+    environment:
+      GETH: geth
+    depends_on:
+      - geth
+    networks:
+      - redis-net
+  redis:
+    image: redis:4.0.5-alpine
+    command: ["redis-server"]
+    hostname: redis
+    volumes:
+      - redis-data:/data
+    networks:
+      - redis-net
+  int-test:
+    container_name: aman-integration-test
+    build:
+      context: ../..
+      dockerfile: projects/aman/Dockerfile
+    environment:
+      # ETH_DAEMON_HOST: "geth"
+      ETH_DAEMON_HTTP_URL: "http://geth:8545"
+      ETH_DAEMON_WS_URL: "ws://geth:8546"
+      DEFAULT_LOG_LEVEL: DEBUG
+      REDIS_HOST: redis
+    depends_on:
+      - geth-dev
+      - redis
+    networks:
+      - redis-net
+    command: npm run int-test
+    links:
+      - geth
+
+volumes:
+  bin:
+  trace:
+  redis-data:
+
+networks:
+  redis-net:

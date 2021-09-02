@@ -1,0 +1,11 @@
+{
+  "name": "@arbiter/arbiter-custodial",
+  "version": "0.0.39",
+  "publishConfig": {
+    "registry": "http://nexus.redacted.example.com/repository/npm-shapeshift/"
+  },
+  "dependencies": {
+    "@arbiter/arb-redis": "0.0.20",
+    "@arbiter/arb-signing": "0.0.28"
+  }
+}

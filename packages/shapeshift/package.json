@@ -1,0 +1,7 @@
+{
+  "name": "@arbiter/shapeshift",
+  "version": "0.0.5",
+  "publishConfig": {
+    "registry": "http://nexus.redacted.example.com/repository/npm-shapeshift/"
+  }
+}

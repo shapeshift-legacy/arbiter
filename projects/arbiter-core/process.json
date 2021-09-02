@@ -1,0 +1,69 @@
+{
+  "apps" : [
+    {
+      "script": "app.js",
+      "name": "arbiter-core",
+      "instances": 1,
+      "exec_mode": "cluster",
+      "log_date_format": "MM-DD-YY HH:mm:ss.SSS",
+      "kill_timeout": 30000
+    },
+    {
+      "script": "api.js",
+      "name": "arbiter-agent-api",
+      "instances": 1,
+      "exec_mode": "cluster",
+      "log_date_format": "MM-DD-YY HH:mm:ss.SSS",
+      "kill_timeout": 30000
+    },
+    {
+      "script": "workers/fullfillment-worker.js",
+      "name": "fullfillment",
+      "instances": 1,
+      "exec_mode": "cluster",
+      "log_date_format": "MM-DD-YY HH:mm:ss.SSS",
+      "kill_timeout": 30000
+    },
+    {
+      "script": "workers/sweeping-worker.js",
+      "name": "sweeping",
+      "instances": 1,
+      "exec_mode": "cluster",
+      "log_date_format": "MM-DD-YY HH:mm:ss.SSS",
+      "kill_timeout": 30000
+    }
+    ,
+    {
+      "script": "workers/admin-worker.js",
+      "name": "admin-worker",
+      "log_date_format": "MM-DD-YY HH:mm:ss.SSS",
+      "kill_timeout": 30000
+    }
+    ,
+    {
+      "script": "workers/slack-worker.js",
+      "name": "slack-worker",
+      "log_date_format": "MM-DD-YY HH:mm:ss.SSS",
+      "kill_timeout": 30000
+    }
+    ,
+    {
+      "script"    : "./workers/audit-trades.js",
+      "name" : "worker-trade",
+      "log_date_format": "MM-DD-YY HH:mm:ss.SSS",
+      "kill_timeout": 30000
+    },
+    {
+      "script"    : "./workers/audit-transfers.js",
+      "name" : "worker-transfer",
+      "log_date_format": "MM-DD-YY HH:mm:ss.SSS",
+      "kill_timeout": 30000
+    },
+    {
+      "script"    : "./workers/report-worker.js",
+      "name" : "report-worker",
+      "log_date_format": "MM-DD-YY HH:mm:ss.SSS",
+      "kill_timeout": 30000
+    }
+  ]
+}

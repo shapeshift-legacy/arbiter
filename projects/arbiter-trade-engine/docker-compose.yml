@@ -1,0 +1,38 @@
+version: '2'
+services:
+  trade-engine-ltc-btc:
+    container_name: teLTC_BTC
+    build: .
+    command: node api 5000 LTC_BTC
+    volumes:
+      - .:/usr/app/
+      - /usr/app/node_modules
+    env_file:
+      - .env
+    ports:
+      - "5000:5000"
+    network_mode: host
+  trade-engine-eth-btc:
+    container_name: teETH_BTC
+    build: .
+    command: node api 5001 ETH_BTC
+    volumes:
+      - .:/usr/app/
+      - /usr/app/node_modules
+    env_file:
+      - .env
+    ports:
+      - "5001:5001"
+    network_mode: host
+  trade-engine-gnt-btc:
+    container_name: teGNT_BTC
+    build: .
+    command: node api 5001 GNT_BTC
+    volumes:
+      - .:/usr/app/
+      - /usr/app/node_modules
+    env_file:
+      - .env
+    ports:
+      - "5002:5002"
+    network_mode: host

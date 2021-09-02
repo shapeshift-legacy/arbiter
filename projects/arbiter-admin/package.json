@@ -1,0 +1,63 @@
+{
+  "name": "frontend",
+  "version": "0.1.43",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "serve-remote": "./node_modules/.bin/vue-cli-service serve --host 0.0.0.0",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "test:e2e": "vue-cli-service test:e2e",
+    "apollo": "vue-cli-service apollo:watch",
+    "apollo:run": "vue-cli-service apollo:run"
+  },
+  "publishConfig": {
+    "registry": "http://nexus.redacted.example.com/repository/npm-shapeshift/"
+  },
+  "dependencies": {
+    "apollo-cache-inmemory": "^1.2.5",
+    "apollo-client": "^2.3.5",
+    "apollo-link": "^1.2.2",
+    "apollo-link-http": "^1.5.4",
+    "dotenv": "^6.0.0",
+    "@arbiter/dumb-lumberjack": "0.1.47",
+    "graphql": "0.13.0",
+    "graphql-type-json": "^0.2.1",
+    "koa": "^2.5.2",
+    "koa-route": "^3.2.0",
+    "koa-static": "^5.0.0",
+    "marked": "^0.4.0",
+    "monk": "^6.0.6",
+    "password-hash": "^1.2.2",
+    "redis": "^2.8.0",
+    "shortid": "^2.2.8",
+    "then-redis": "^2.0.1",
+    "vue": "^2.5.16",
+    "vue-apollo": "^3.0.0-beta.19",
+    "vue-cli": "^2.9.6",
+    "vue-emoji-picker": "^1.0.1",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1",
+    "when": "^3.7.8",
+    "yarn": "^1.9.4",
+    "yub": "^0.11.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.0-beta.11",
+    "@vue/cli-plugin-e2e-cypress": "^3.0.0-beta.11",
+    "@vue/cli-plugin-eslint": "^3.0.0-beta.11",
+    "@vue/cli-service": "^3.0.0-beta.11",
+    "@vue/eslint-config-standard": "^3.0.0-beta.11",
+    "eslint-plugin-graphql": "^2.1.1",
+    "graphql-tag": "^2.9.2",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "vue-cli-plugin-apollo": "^0.14.3",
+    "vue-template-compiler": "^2.5.16"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "gitHead": "f6ad3d6bbddf652e65b1f7a7c68b579486547e93"
+}

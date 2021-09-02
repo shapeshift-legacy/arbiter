@@ -1,0 +1,15 @@
+{
+  "name": "@arbiter/arb-rates",
+  "version": "0.1.44",
+  "description": "",
+  "main": "index.js",
+  "publishConfig": {
+    "registry": "http://nexus.redacted.example.com/repository/npm-shapeshift/"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "gitHead": "f6ad3d6bbddf652e65b1f7a7c68b579486547e93"
+}

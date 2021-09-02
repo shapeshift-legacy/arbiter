@@ -1,0 +1,11 @@
+{
+  "name": "jenkins",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "",
+    "run": "docker run -p 9001:8080 --restart always --name jekins01 -p 50000:50000 -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts "
+  },
+  "dependencies": {
+    
+  }
+}

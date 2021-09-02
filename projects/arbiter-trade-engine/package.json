@@ -1,0 +1,55 @@
+{
+	"name": "arbiter-trade-engine",
+	"version": "0.1.48",
+	"description": "Repository description",
+	"devDependencies": {
+		"eslint": "4.3.0",
+		"eslint-config-standard": "^10.2.1"
+	},
+	"publishConfig": {
+		"registry": "http://nexus.redacted.example.com/repository/npm-shapeshift/"
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"report": "open test-report/index.html",
+		"test": "mocha $(find test -name '*.spec.js')",
+		"test-cov": "istanbul cover -x test/mocha-common.spec.js _mocha -- $(find test -name '*.spec.js')",
+		"start": "pm2 start api.js --name=teLTC_BTC -- 5000 LTC_BTC && pm2 start api.js --name=teETH_BTC -- 5001 ETH_BTC && pm2 start api.js --name=teGNT_BTC -- 5002 GNT_BTC",
+		"start-dev": "node apidev.js"
+	},
+	"eslintIgnore": [
+		"coverage",
+		"test-report"
+	],
+	"dependencies": {
+		"@arbiter/arb-accounting": "^0.1.47",
+		"@arbiter/arb-redis": "0.0.20",
+		"@arbiter/arb-mongo": "0.0.31",
+		"big.js": "^5.0.3",
+		"chai": "^3.5.0",
+		"chai-as-promised": "^6.0.0",
+		"cli-color": "^1.2.0",
+		"co-body": "^5.1.1",
+		"dotenv": "^6.0.0",
+    "@arbiter/dumb-lumberjack": "0.1.47",
+		"istanbul": "^0.4.5",
+		"kcors": "^2.2.1",
+		"koa": "^2.5.0",
+		"koa-bodyparser": "^4.2.0",
+		"koa-cors": "0.0.16",
+		"koa-route": "^3.2.0",
+		"mkdirp": "^0.5.1",
+		"mocha": "^3.2.0",
+		"mochawesome": "^1.5.4",
+		"monk": "^6.0.5",
+		"node-uuid": "^1.4.8",
+		"promise-redis": "0.0.5",
+		"proxyquire": "^1.7.10",
+		"redis": "^2.8.0",
+		"rewire": "^2.5.2",
+		"sinon": "^1.17.6",
+		"sinon-chai": "^2.8.0",
+		"then-redis": "^2.0.1"
+	},
+	"gitHead": "be54017539c0e932352e93e5ac038e5eccca472e"
+}

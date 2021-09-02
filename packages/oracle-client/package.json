@@ -1,0 +1,7 @@
+{
+  "name": "@arbiter/arb-oracle-client",
+  "version": "0.0.15",
+  "dependencies": {
+    "@arbiter/dumb-lumberjack": "0.1.47"
+  }
+}

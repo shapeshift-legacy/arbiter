@@ -1,0 +1,18 @@
+{
+  "apps" : [{
+    "script"    : "./app.js",
+    "args": "LTC_BTC",
+    "name" : "LiquLTC_BTC"
+    },
+    {
+      "script"    : "./app.js",
+      "args": "ETH_BTC",
+      "name" : "LiquETH_BTC"
+    },
+    {
+      "script"    : "./app.js",
+      "args": "GNT_BTC",
+      "name" : "LiquGNT_BTC"
+    }
+  ]
+}

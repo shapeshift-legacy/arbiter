@@ -1,0 +1,104 @@
+version: '2'
+services:
+  core-app:
+    container_name: core-app
+    build: .
+    command: node app
+    volumes:
+      - .:/usr/app/
+      - /usr/app/node_modules
+    env_file:
+      - .env
+    network_mode: host
+  core-api:
+    container_name: core-api
+    build: .
+    command: node api
+    volumes:
+      - .:/usr/app/
+      - /usr/app/node_modules
+    env_file:
+      - .env
+    ports:
+      - "3010:3010"
+    # network_mode: host
+  worker-fullfillment:
+    container_name: core-worker-fullfillment
+    build: .
+    command: node workers/fullfillment-worker.js
+    volumes:
+      - .:/usr/app/
+      - /usr/app/node_modules
+    env_file:
+      - .env
+    network_mode: host
+  worker-fullfillment:
+    container_name: core-worker-fullfillment
+    build: .
+    command: node workers/fullfillment-worker.js
+    volumes:
+      - .:/usr/app/
+      - /usr/app/node_modules
+    env_file:
+      - .env
+    network_mode: host
+  worker-sweeping:
+    container_name: core-worker-sweeping
+    build: .
+    command: node workers/sweeping-worker.js
+    volumes:
+      - .:/usr/app/
+      - /usr/app/node_modules
+    env_file:
+      - .env
+    network_mode: host
+  worker-admin:
+    container_name: core-worker-admin
+    build: .
+    command: node workers/admin-worker.js
+    volumes:
+      - .:/usr/app/
+      - /usr/app/node_modules
+    env_file:
+      - .env
+    network_mode: host
+  worker-data-fetcher:
+    container_name: core-worker-data-fetcher
+    build: .
+    command: node workers/data-fetcher.js
+    volumes:
+      - .:/usr/app/
+      - /usr/app/node_modules
+    env_file:
+      - .env
+    network_mode: host
+  worker-audit-trades:
+    container_name: core-worker-audit-trades
+    build: .
+    command: node workers/audit-trades.js
+    volumes:
+      - .:/usr/app/
+      - /usr/app/node_modules
+    env_file:
+      - .env
+    network_mode: host
+  worker-audit-transfers:
+    container_name: core-worker-audit-transfers
+    build: .
+    command: node workers/audit-transfers.js
+    volumes:
+      - .:/usr/app/
+      - /usr/app/node_modules
+    env_file:
+      - .env
+    network_mode: host
+  worker-charts:
+    container_name: core-worker-charts
+    build: .
+    command: node workers/audit-transfers.js
+    volumes:
+      - .:/usr/app/
+      - /usr/app/node_modules
+    env_file:
+      - .env
+    network_mode: host

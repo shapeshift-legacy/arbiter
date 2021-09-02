@@ -1,0 +1,12 @@
+{
+  "name": "@arbiter/arb-redis",
+  "version": "0.0.20",
+  "publishConfig": {
+    "registry": "http://nexus.redacted.example.com/repository/npm-shapeshift/"
+  },
+  "dependencies": {
+    "redis": "^2.8.0",
+    "then-redis": "^2.0.1"
+  },
+  "gitHead": "be54017539c0e932352e93e5ac038e5eccca472e"
+}

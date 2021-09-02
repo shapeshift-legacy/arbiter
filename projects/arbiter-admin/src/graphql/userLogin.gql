@@ -1,0 +1,15 @@
+#import "./userFragment.gql"
+
+mutation userLogin ($email: String!, $password: String!, $yubikey: String!) {
+  userLogin (email: $email, password: $password, yubikey: $yubikey) {
+    user {
+      ...user
+      email
+    }
+    token {
+      id
+      userId
+      expiration
+    }
+  }
+}

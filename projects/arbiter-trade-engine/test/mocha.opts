@@ -1,0 +1,5 @@
+--require ./test/mocha-common.js
+--recursive
+--bail
+--colors
+--reporter spec

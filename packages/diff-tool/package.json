@@ -1,0 +1,7 @@
+{
+  "name": "@arbiter/coin-diff-tool",
+  "version": "0.0.2",
+  "dependencies": {
+    "big.js": "^5.1.2"
+  }
+}
